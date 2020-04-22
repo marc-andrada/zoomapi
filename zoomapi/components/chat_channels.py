@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 """Zoom.us REST API Python Client -- Chat Messages component"""
 
 from zoomapi import util
@@ -52,3 +53,17 @@ class ChatChannelsComponentV2(base.BaseComponent):
                                    params=kwargs)
 
 
+=======
+"""Zoom.us REST API Python Client -- Chat Messages component"""
+
+from zoomapi.util import Throttled
+from zoomapi.components import base
+
+class ChatChannelsComponentV2(base.BaseComponent):
+    """Component dealing with all chat channels related matters"""
+
+    @Throttled
+    def list(self, **kwargs):
+        return self.get_request("/chat/users/me/channels")
+
+>>>>>>> 0ceec23a119c775f79313b89479fd2041085ab4a
