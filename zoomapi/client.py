@@ -50,6 +50,8 @@ class ZoomClient(util.ApiClient):
     def refresh_token(self):
         pass
 
+
+    #getters/setters for api key and secret
     @property
     def api_key(self):
         """The Zoom.us api_key"""
@@ -71,6 +73,8 @@ class ZoomClient(util.ApiClient):
         """Set the api_secret"""
         self.config["api_secret"] = value
         self.refresh_token()
+
+
 
     @property
     def meeting(self):

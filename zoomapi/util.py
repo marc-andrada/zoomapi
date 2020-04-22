@@ -80,6 +80,7 @@ class ApiClient(object):
         """
         if headers is None:
             headers = {"Authorization": "Bearer {}".format(self.config.get("token"))}
+
         return requests.get(
             self.url_for(endpoint), params=params, headers=headers, timeout=self.timeout
         )
